@@ -21,6 +21,10 @@ public class Vertice {
 	public void adicionarArco (Vertice y) {
 		this.adj.add(y);
 	}
+	
+	public boolean testarArco (Vertice y) {
+		return this.adj.contains(y);
+	}
 /**	
 	public void adicionarAresta (Vertice y) {
 		this.adicionarArco(y);
@@ -34,8 +38,9 @@ public class Vertice {
 		
 		sb.append(this.getNome() + ": [");
 		
-		for (Vertice v : this.adj) {
-			sb.append(v.getNome());
+//		for (Vertice v : this.adj) {
+		for (int i = 0; i < this.adj.size(); i++) {
+			sb.append(this.adj.get(i).getNome());
 			a++;
 			
 			if (a < this.adj.size())

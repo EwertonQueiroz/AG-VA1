@@ -31,18 +31,23 @@ public class Main {
 		e.adicionarArco(d);
 		e.adicionarArco(b);
 		
-//		System.out.println(a);
-		System.out.println("A: " + a.getAdjacencias());
-		System.out.println("B: " + b.getAdjacencias());
+//		System.out.println(a.testarArco(e) + ", " + b.testarArco(d));
+		
+		System.out.println(a);
+//		System.out.println("A: " + a.getAdjacencias());
+//		System.out.println("B: " + b.getAdjacencias());
 //		System.out.println(a.getAdjacencias().get(0));
 //		System.out.println(a.getAdjacencias().get(1));
-//		System.out.println(b);
-//		System.out.println(c);
-//		System.out.println(d);
-//		System.out.println(e);
+		System.out.println(b);
+		System.out.println(c);
+		System.out.println(d);
+		System.out.println(e);
 
-		g = new Grafo(a.getAdjacencias());
-		g.adicionarVertice(b.getAdjacencias());
+		g = new Grafo(a);
+		g.adicionarVertice(b);
+		g.adicionarVertice(c);
+		g.adicionarVertice(d);
+		g.adicionarVertice(e);
 		
 		System.out.println(g);
 	}
