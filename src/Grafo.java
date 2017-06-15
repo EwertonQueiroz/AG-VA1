@@ -8,5 +8,27 @@ public class Grafo {
 		this.listasAdj.add(v);
 	}
 	
+	public void adicionarVertice (ArrayList<Vertice> v) {
+		this.listasAdj.add(v);
+	}
+	
+	public String toString () {		
+		int a = 0;
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("{");
+		
+		for (ArrayList<Vertice> v : this.listasAdj) {
+			sb.append(v);
+			a++;
+			
+			if (a < this.listasAdj.size())
+				sb.append("; ");
+		}
+		
+		sb.append("}");
+		
+		return sb.toString();
+	}
 	
 }

@@ -5,6 +5,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		Vertice a, b, c, d, e;
+		Grafo g;
 		
 		a = new Vertice("A");
 		b = new Vertice("B");
@@ -30,16 +31,20 @@ public class Main {
 		e.adicionarArco(d);
 		e.adicionarArco(b);
 		
-		System.out.println(a);
-//		System.out.println(a.getAdjacencias());
+//		System.out.println(a);
+		System.out.println("A: " + a.getAdjacencias());
+		System.out.println("B: " + b.getAdjacencias());
 //		System.out.println(a.getAdjacencias().get(0));
 //		System.out.println(a.getAdjacencias().get(1));
-		System.out.println(b);
-		System.out.println(c);
-		System.out.println(d);
-		System.out.println(e);
+//		System.out.println(b);
+//		System.out.println(c);
+//		System.out.println(d);
+//		System.out.println(e);
 
-
+		g = new Grafo(a.getAdjacencias());
+		g.adicionarVertice(b.getAdjacencias());
+		
+		System.out.println(g);
 	}
 
 }
