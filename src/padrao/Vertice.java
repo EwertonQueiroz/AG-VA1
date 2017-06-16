@@ -1,13 +1,20 @@
+package padrao;
 import java.util.ArrayList;
 
 public class Vertice {
 	
+	private int id = 0;
 	private String nome;
 	private ArrayList<Vertice> adj;
 	
 	public Vertice (String nome) {
 		this.adj = new ArrayList<Vertice>();
 		this.nome = nome;
+		this.id += this.id + 1;
+	}
+	
+	public int getId () {
+		return this.id;
 	}
 	
 	public String getNome () {

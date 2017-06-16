@@ -1,3 +1,4 @@
+package padrao;
 import java.util.ArrayList;
 
 public class Grafo {
@@ -7,12 +8,12 @@ public class Grafo {
 	public Grafo (Vertice v) {
 		this.listasAdj = new ArrayList<ArrayList<Vertice>>();
 		this.listasAdj.add(v.getAdjacencias());
-		nomes.add(v.getNome());
+		this.nomes.add(v.getNome());
 	}
 	
 	public void adicionarVertice (Vertice v) {
 		this.listasAdj.add(v.getAdjacencias());
-		nomes.add(v.getNome());
+		this.nomes.add(v.getNome());
 	}
 	
 	public String toString () {		
