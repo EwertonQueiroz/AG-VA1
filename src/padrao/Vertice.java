@@ -3,14 +3,14 @@ import java.util.ArrayList;
 
 public class Vertice {
 	
-	private int id = 0;
+	private int id;
 	private String nome;
 	private ArrayList<Vertice> adj;
 	
-	public Vertice (String nome) {
+	public Vertice (String nome, int id) {
 		this.adj = new ArrayList<Vertice>();
 		this.nome = nome;
-		this.id += this.id + 1;
+		this.id = id;
 	}
 	
 	public int getId () {

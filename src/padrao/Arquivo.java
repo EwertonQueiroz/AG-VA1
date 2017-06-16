@@ -39,6 +39,8 @@ public class Arquivo {
 			}
 			
 			br.close();
+			isr.close();
+			is.close();
 		}
 		
 		catch (IOException e) {
