@@ -1,16 +1,14 @@
 package padrao;
-import java.util.ArrayList;
 
 public class Vertice {
 	
+	private static int count = 0;
 	private int id;
 	private String nome;
-	private ArrayList<Vertice> adj;
 	
-	public Vertice (String nome, int id) {
-		this.adj = new ArrayList<Vertice>();
+	public Vertice (String nome) {
 		this.nome = nome;
-		this.id = id;
+		this.id = Vertice.count++;
 	}
 	
 	public int getId () {
@@ -21,36 +19,15 @@ public class Vertice {
 		return this.nome;
 	}
 	
-	public ArrayList<Vertice> getAdjacencias () {
-		return this.adj;
-	}
-	
-	public void adicionarArco (Vertice y) {
-		this.adj.add(y);
-	}
-	
-	public boolean testarArco (Vertice y) {
-		return this.adj.contains(y);
-	}
-/**	
-	public void adicionarAresta (Vertice y) {
-		this.adicionarArco(y);
-//		y.adj.add(// Adicionar objeto que chamou o método);
-	}
-*/
-	
 	public String toString () {		
-		int a = 0;
 		StringBuilder sb = new StringBuilder();
 		
-		sb.append(this.getNome() + ": [");
+		sb.append("[");
 		
-//		for (Vertice v : this.adj) {
-		for (int i = 0; i < this.adj.size(); i++) {
-			sb.append(this.adj.get(i).getNome());
-			a++;
+		for (int i = 0; i < Vertice.count; i++) {
+			sb.append("");
 			
-			if (a < this.adj.size())
+			if (i != Vertice.count - 1)
 				sb.append(", ");
 		}
 		
@@ -58,4 +35,5 @@ public class Vertice {
 		
 		return sb.toString();
 	}
+
 }
