@@ -1,4 +1,4 @@
-package padrao;
+package source;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -9,17 +9,17 @@ import java.util.ArrayList;
 
 public class Arquivo {
 	
-	private ArrayList<String> grafo;
+	private ArrayList<String> caracteres;
 	private Integer tamanho;
 	
 	public Arquivo (String path) {
-		this.grafo = new ArrayList<String>();
+		this.caracteres = new ArrayList<String>();
 		this.ler_arquivo(path);
-		this.tamanho = Integer.parseInt(this.grafo.get(0));
+		this.tamanho = Integer.parseInt(this.caracteres.get(0));
 	}
 	
-	public ArrayList<String> getGrafo () {
-		return this.grafo;
+	public ArrayList<String> getCaracteres () {
+		return this.caracteres;
 	}
 	
 	public Integer getTamanho () {
@@ -34,7 +34,7 @@ public class Arquivo {
 			String s = br.readLine();
 			
 			while (s != null) {
-				this.grafo.add(s);
+				this.caracteres.add(s);
 				s = br.readLine();
 			}
 			
@@ -44,7 +44,7 @@ public class Arquivo {
 		}
 		
 		catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("Erro: " + e.getMessage());
 		}
 	}
 	
